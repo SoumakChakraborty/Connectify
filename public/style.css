@@ -1,0 +1,1269 @@
+#landing
+{
+    background: url("https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80");
+    background-repeat: round;
+    background-size: cover;
+    margin:0;
+}
+h1
+{
+    font-family:Dancing Script;
+    color:blue;
+}
+h1 span
+{
+    font-family:Jura;
+    font-size:25px;
+    color:black;
+    font-weight: 800;
+}
+#formdiv
+{
+    width:42%;
+    border:1px gray solid;
+    border-radius:5px;
+    padding:15px;
+    margin:auto;
+    margin-top:15%;
+}
+#username
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+#fname
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+#fname:hover
+{
+    border:1px black solid;
+}
+#lname
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+#lname:hover
+{
+    border:1px black solid;
+}
+#username:hover
+{
+    border:1px black solid;
+}
+.password
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+.password:hover
+{
+    border:1px black solid;
+}
+.retype-password
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+#DOB
+{
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+#DOB:hover
+{
+    border:1px black solid;
+}
+.gen
+{
+    margin-top:3%; 
+}
+.retype-password:hover
+{
+    border:1px black solid;
+}
+#submit-div
+{
+    width:20%;
+    margin:auto;
+    margin-top: 3%;    
+}
+#submit
+{  
+    background: gainsboro;
+    border:1px gainsboro solid;
+    border-radius: 5px;
+    padding:10px;
+    color:gray;
+    width:100%;
+}
+#submit:hover
+{
+    border: 1px gray solid;
+    color:black;
+}
+#submit-div-pass
+{
+    width:40%;
+    margin:auto;
+    margin-top: 3%;    
+}
+#submit-pass
+{  
+    background: gainsboro;
+    border:1px gainsboro solid;
+    border-radius: 5px;
+    padding:10px;
+    color:gray;
+    width:100%;
+}
+#submit-pass:hover
+{
+    border: 1px gray solid;
+    color:black;
+}
+#forgot-pass
+{
+    text-decoration: none;
+    color:black;
+    font-family: Jura;
+    font-weight: 600;
+}
+#forgot-pass:hover
+{
+    color:rgb(11, 51, 66);
+    text-decoration: underline;
+}
+#new-user
+{
+    text-decoration: none;
+    margin-left:15%;
+    color:black;
+    font-family: Jura;
+    font-weight: 600;
+}
+#new-user:hover
+{
+    color:rgb(11, 51, 66);
+    text-decoration:underline;
+}
+#user-div
+{
+    width:50%;
+    margin:auto;
+    margin-top:5%;
+}
+.error
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px red solid;
+    border-radius:5px;
+}
+#showerror
+{
+    width:40%;
+    background: red;
+    border:1px red solid;
+    border-radius: 5px;
+    color:white;
+    padding:10px;
+    text-align: center;
+    margin:auto;
+}
+#profile
+{
+    margin:0;
+}
+#nav-div
+{
+    background: gainsboro;
+    border:1px gray solid;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 5px;
+    height:4%;
+}
+#app-name
+{
+    text-decoration: none;
+    color:gray;
+    font-family:Dancing Script;
+    font-size:1.2em;
+    font-weight: 800;
+    float: left;
+}
+#user-show
+{
+    width:1.7%;
+    margin-left: auto;
+}
+#user-show-img
+{
+    width:100%;
+    border-radius: 20px;
+}
+.user-list
+{
+    list-style: none;
+    width:15%;
+    padding-left: 0;
+    margin-top:.7%;
+    margin-left: auto;
+    display:none;
+}
+.user-list-show
+{
+    display: block;
+}
+.user-list li a
+{
+   text-decoration: none;
+   font-family:Jura;
+   color:gray;
+}
+.user-list li
+{
+    padding:8px;
+    background: rgb(245, 244, 244);
+}
+#first
+{
+    border-top:1px gray solid;
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#second
+{
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+}
+#third
+{
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+}
+#fourth
+{
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+}
+#fifth
+{
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+}
+#sixth
+{
+    border-bottom:1px gray solid;
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#search-div
+{
+    width:70%;
+    margin:auto;
+    margin-top:2%;
+}
+#search-div form
+{
+    margin-bottom: 0;
+}
+#search
+{
+    border:1px gray solid;
+    padding:15px;
+    border-radius: 5px;
+    width:80%;
+}
+#search-submit
+{
+    width:12%;
+    background:url("/search.png");
+    background-repeat: no-repeat;
+    padding:15px;
+    border:1px white solid;
+}
+#profile-pic
+{
+    margin-top:3%;
+    margin-left: 3%;
+    width:92%;
+    padding:15px;
+    border:1px gainsboro solid;
+    border-radius:5px;   
+}
+#profile-pic:hover
+{
+    border:1px black solid;
+}
+#result-div{
+    width:30%;
+    padding:15px;
+    border:1px gray solid;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+#result-div-img
+{
+    width:20%;
+    float:left;
+}
+#result-div-img img
+{
+    width:100%;
+    border:1px gainsboro solid;
+    border-radius:5px;
+}
+#result-div-anchor
+{
+    width:40%;
+    margin-left:25%;
+    margin-top:17%;
+}
+#result-div-anchor a
+{
+    text-decoration: none;
+    color:skyblue;
+    font-family: Jura;
+}
+#result-div-anchor a:hover
+{
+    text-decoration: underline;
+    color:rgb(9, 60, 80);
+}
+#profile-show
+{
+    border-left:1px gray solid;
+    border-right:1px gray solid;
+    border-bottom:1px gray solid;
+    border-radius: 5px;
+    width:30%;
+    margin:auto;
+}
+#profile-show img
+{
+    border-top:1px gray solid;
+    border-radius: 5px;
+    width:100%;
+}
+#profile-show p
+{
+    text-align: center;
+}
+#user-interaction
+{
+    list-style: none;
+    padding-left: 0;
+}
+#user-interaction li a
+{
+    text-decoration: none;
+    color:rgb(9, 59, 78);
+    font-family: Jura;
+}
+#user-interaction li
+{
+    padding:5px;
+}
+#user-interaction li a:hover
+{
+    text-decoration: underline;
+}
+#send-message a
+{
+    text-decoration: none;
+    color:black;
+    font-weight: 800;
+}
+#send-message
+{
+    text-align: center;
+    width:30%;
+    border:1px skyblue solid;
+    border-radius: 5px;
+    padding:8px;
+    float: left;
+}
+#send-message:hover
+{
+    background:gainsboro;
+}
+.send-message a
+{
+    text-decoration: none;
+    color:black;
+    font-weight: 800;
+}
+.send-message
+{
+    text-align: center;
+    width:30%;
+    border:1px skyblue solid;
+    border-radius: 5px;
+    padding:8px;
+    margin:auto;
+    margin-bottom:2%;
+}
+.send-message:hover
+{
+    background:gainsboro;
+}
+#add-friend a
+{
+    text-decoration: none;
+    color:black;
+    font-weight: 800;
+}
+#add-friend
+{
+    text-align: center;
+    width:30%;
+    border:1px skyblue solid;
+    border-radius: 5px;
+    padding:8px;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+#add-friend:hover
+{
+    background:gainsboro;
+}
+#send-msg-div
+{
+    width:45%;
+    border:1px gray solid;
+    border-radius:5px;
+    padding: 20px;
+    margin:auto;
+    margin-top:15%;
+}
+#message
+{
+    width:100%;
+    padding:35px;
+    border:1px gainsboro solid;
+    border-radius: 5px;
+}
+#submit-msg
+{
+    margin-top:3%;
+    background:white;
+    border:1px green solid;
+    border-radius: 5px;
+    padding:10px;
+    width:100%;
+    font-weight: 800;
+}
+#submit-msg:hover
+{
+   background: gainsboro;
+}
+#show-success
+{
+    width:40%;
+    background: green;
+    border:1px green solid;
+    border-radius: 5px;
+    color:white;
+    padding:10px;
+    text-align: center;
+    margin:auto;
+}
+#read-message
+{
+    border:1px black solid;
+    border-radius: 5px;
+    padding:10px;
+    width:35%;
+    margin: auto;
+    margin-top:3%;
+}
+#read-message a
+{
+    text-decoration: none;
+    color:skyblue;
+    font-family:Jura;
+}
+#read-message a:hover
+{
+    color:rgb(132, 163, 175);
+    text-decoration: underline;
+}
+.expanded
+{
+    display: none;
+}
+.view-less
+{
+    display: none;
+}
+.contracted-click
+{
+    display:none;
+}
+.expanded-click
+{
+    display:block;
+}
+.view-more-click
+{
+    display: none;
+}
+.view-less-click
+{
+    display: inline;
+}
+#Del-accept a
+{
+    text-decoration: none;
+    color:rgb(12, 69, 92);
+    font-family: Jura;
+}
+#del-accept a:hover
+{
+    text-decoration: underline;
+}
+#del-accept
+{
+    margin-top:5%;
+}
+#post-content
+{
+    margin-top:3%;
+    width:100%;
+    padding:35px;
+    border:1px gray solid;
+    border-radius: 5px;
+}
+#post-photo
+{
+    margin-top:3%;
+    width:100%;
+    border:1px gray solid;
+    border-radius:5px;
+    padding:15px;
+}
+#submit-post
+{
+    margin-top:3%;
+    background:green;
+    border:1px green solid;
+    color:black;
+    font-weight: 800;
+    opacity:.8;
+    padding:15px;
+    border-radius: 5px;
+    width:100%;
+}
+#submit-edit-post
+{
+    margin-top:3%;
+    background:orange;
+    border:1px orange solid;
+    color:black;
+    font-weight: 800;
+    opacity:.8;
+    padding:15px;
+    border-radius: 5px;
+    width:100%;
+}
+#postname
+{
+    margin-top:3%;
+    width:100%;
+    border:1px gray solid;
+    border-radius:5px;
+    padding:15px;
+}
+#post-div
+{
+    border:1px black solid;
+    width:30%;
+    padding:10px;
+    border-radius: 5px;
+    margin:auto;
+}
+#post-div-view
+{
+    border:1px black solid;
+    width:80%;
+    padding:10px;
+    border-radius: 5px;
+    margin:auto;
+}
+
+.post-action
+{
+    text-decoration: none;
+    color:gray;
+    font-family: Quicksand;
+}
+.post-action:hover
+{
+    color:black;
+    text-decoration: underline;
+}
+#comment-text
+{
+    width:100%;
+    padding:35px;
+    border:1px gray solid;
+    border-radius: 5px;
+}
+#submit-comment
+{
+    margin-top:3%;
+    width:100%;
+    padding:10px;
+    background: green;
+    border:1px green solid;
+    border-radius: 5px;
+    font-weight: 800;
+}
+#post-comment
+{
+    padding:15px;
+    background:gainsboro;
+    border:1px gainsboro solid;
+    border-radius: 5px;
+}
+#post-mood
+{
+    margin-top:3%;
+    padding:15px;
+}
+#photos-div
+{
+    margin-top:3%;
+}
+#photos-div img
+{
+   margin-right: 2%; 
+   width:10%;
+   border:1px gray solid;
+   border-radius:5px;
+}
+#view-photo-div
+{
+    border:1px black solid;
+    width:35%;
+    margin:auto;
+}
+#view-photo-div img
+{
+    width:100%;
+}
+#view-comment-div
+{
+    margin-top: 3%;
+    background:gainsboro;
+    padding:10px;
+}
+#delete-submit
+{
+    padding:5px;
+    background:red;
+    border:1px red solid;
+    font-weight: 800;
+    border-radius:5px;
+}
+#frm1
+{
+    width:20%;
+    margin-left:10%;
+}
+#frm
+{
+    width:15%;
+    margin-left:15%;
+}
+#user-utility
+{
+    float: left;
+}
+#comment-anchor
+{
+    float: left;
+}
+#chat-message
+{
+    border:1px gray solid;
+    border-radius: 5px;
+    height:50%;
+    width:50%;
+    margin:auto;
+    margin-top:10%;
+    overflow: auto;
+}
+#utility
+{
+    width:50%;
+    margin:auto;
+    margin-top:3%;
+}
+#chat
+{
+    width:100%;
+    padding:10px;
+    border:1px gainsboro solid;
+    border-radius: 15px;
+}
+#send-div a
+{
+   text-decoration: none;
+   color:gainsboro;
+}
+#send-div
+{
+    border:1px rgb(36, 85, 104) solid;
+    width:15%;
+    text-align: center;
+    padding:10px;
+    background:rgb(36, 85, 104);
+    border-radius: 8px;
+    margin:auto;
+    margin-top:2%;
+}
+#sendmsg
+{
+    margin-top:5%;
+    list-style: none;
+    background: gray;
+    color:black;
+    padding:10px;
+    width:30%;
+    border:1px gray solid;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 5%;
+}
+#recv
+{
+    margin-top: 5%;
+    list-style: none;
+    background: rgb(63, 63, 240);
+    color:white;
+    padding:10px;
+    width:30%;
+    border:1px rgb(63, 63, 240) solid;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 5%;
+}
+#toggle-img
+{
+    width:4%;
+}
+#friend
+{
+    list-style: none;
+    color:rgb(10, 78, 105);
+    font-family: Jura;
+    margin-left: 2%;
+}
+#none
+{
+    color:rgb(10, 78, 105);
+    font-family: Jura;    
+}
+#online-pic
+{
+    border-radius: 20px;
+    width:2%;
+}
+@media screen and (max-width:1125px)
+{
+    #search-div
+   {
+    width:70%;
+    }
+    #search-submit
+    {
+      width:12%;
+      padding:15px;
+    }
+    #frm
+    {
+        margin-left:25%;
+    } 
+    #post-div
+   {
+    width:50%;
+   }
+    #view-photo-div
+   {
+    width:50%;
+   }
+
+    #user-div
+    {
+     width:80%;
+   }
+   #formdiv
+   {
+    width:60%;
+  }
+  #profile-show
+  {
+    width:45%;
+  }
+}
+@media screen and (max-width:1000px)
+{
+    #result-div{
+        width:100%;
+       }
+}
+@media screen and (max-width:720px)
+{
+    .user-list
+    {
+       margin-top:1.5%; 
+       width:35%;
+     }
+    #search-div
+    {
+        margin-top:45%;
+     width:85%;
+     }
+     #search-submit
+     {
+       width:12%;
+       padding:15px;
+     }
+    #post-div
+    {
+     width:70%;
+    }
+    #user-show
+    {
+        width:3%;
+    }
+    #read-message
+   {
+    width:55%;
+   }
+    #view-photo-div
+    {
+     width:70%;
+    }
+    #profile-show
+    {
+    width:55%;
+    margin-top: 20%;
+    }
+    #result-div{
+        width:80%;
+    }
+    #user-div
+    {
+     width:85%;
+    }
+   #formdiv
+   {
+     margin-top:30%;  
+    width:80%;
+  }
+  #send-msg-div
+   {
+     margin-top:30%;  
+    width:80%;
+  }
+}
+@media screen and (max-width:600)
+{
+    #result-div{
+        width:98%;
+    } 
+}
+@media screen and (max-width:500px)
+{
+    #result-div{
+        width:98%;
+    }
+    #user-show
+    {
+        width:3.5%;
+    }
+    .user-list
+    {
+       margin-top:3.5%; 
+       width:40%;
+    }
+    #search-div
+    {
+      margin-top: 65%;  
+     width:92%;
+     }
+     #search-submit
+     {
+       width:12%;
+       padding:15px;
+     }
+    #read-message
+    {
+     width:85%;
+    }
+    #view-photo-div
+    {
+     width:95%;
+    }
+    #profile-show
+    {
+        margin-top: 20%;
+    width:65%;
+    }
+    #user-div
+    {
+     width:85%;
+    }
+   #formdiv
+   {
+    margin-top:50%;  
+    width:92%;
+   }
+   #send-msg-div
+   {
+     margin-top:30%;  
+    width:92%;
+  }
+   #chat-message
+   {
+       width:85%;
+       height:55%;
+   }
+   #utility
+   { 
+    width:85%;
+   }
+}
+@media screen and (max-width:400px)
+{
+    #user-show
+    {
+        width:4.5%;
+    }
+    .user-list
+    {
+       margin-top:4.5%; 
+       width:45%;
+    }
+    #search-div
+    {
+        margin-top:75%;
+     width:92%;
+     }
+     #search-submit
+     {
+       width:15%;
+       padding:15px;
+     }
+    #post-div-view
+    {
+    width:92%;
+   }
+    #post-div
+    {
+       margin-top:25%; 
+     width:92%;
+    }
+    #result-div{
+        width:98%;
+    }
+    #user-div
+    {
+     width:90%;
+    }
+   #formdiv
+   {
+    margin-top:50%;  
+    width:100%;
+   }
+   #send-msg-div
+   {
+     margin-top:30%;  
+    width:100%;
+  }
+   #toggle-img
+   {
+    width:3.7%;
+   }
+   #landing
+  {
+    background: url("https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80");
+    background-repeat:round;
+    background-size: cover;
+  }
+}
+@media screen and (max-width:360px)
+{
+    #user-show
+    {
+        width:5%;
+    }
+    .user-list
+    {
+       margin-top:5%; 
+       width:50%;
+    }
+    #search-div
+    {
+        margin-top:85%;
+     width:98%;
+     }
+    #search-submit
+     {
+       width:18%;
+       padding:15px;
+     }
+    #view-photo-div
+    {
+     width:100%;
+    }
+    #profile-show
+    {
+        margin-top: 20%;
+        width:92%;
+    }
+    #chat-message
+    {
+       width:98%;
+       height:60%;
+    }
+   #utility
+   { 
+    width:98%;
+   }
+    #submit-div-pass
+    {
+    width:60%;    
+    }
+    #formdiv
+   {
+    margin-top:50%;  
+    width:100%;
+   }
+   #send-msg-div
+   {
+     margin-top:30%;  
+    width:100%;
+  }
+    #toggle-img
+    {
+    width:3.5%;
+   }
+   #submit-div
+   {
+       width:40%;
+   }
+}
+@media screen and (max-width:300px)
+{
+    #user-show
+    {
+        width:6%;
+    }
+    .user-list
+    {
+       margin-top:5.8%; 
+       width:65%;
+    }
+    #search-div
+    {
+        margin-top:96%;
+     width:98%;
+     }
+}
+@media screen and (max-width:264px)
+{
+    #user-show
+    {
+        width:6.5%;
+    }
+    .user-list
+    {
+       margin-top:7%; 
+       width:100%;
+    }
+    #search-div
+    {
+        margin-top:100%;
+     width:98%;
+     }
+    #post-div-view
+    {
+      width:160%;
+   }
+    #frm
+    {
+        margin-left:45%;
+    } 
+    #post-div
+    {
+       margin-top:45%; 
+     width:98%;
+    }
+    #read-message
+    {
+     width:92%;
+    }
+    #profile-show
+    {
+        margin-top: 20%;
+        width:125%;
+    }
+    #result-div{
+        width:94%;
+    }
+ #send-div
+ {
+    width:25%;
+ }
+    #submit-div-pass
+    {
+    width:80%;    
+    }
+    #user-div
+    {
+     width:100%;
+    }
+    #username
+    {
+    margin-left: 1.5%;
+    }
+    .password
+    {
+        margin-left: 1.5%;
+    }
+    #toggle-img
+    {
+    width:3.3%;
+   }
+   #new-user
+  {
+    margin-left:5%; 
+  }
+}
+@media screen and (max-width:240px)
+{
+    #user-show
+    {
+        width:8%;
+    }
+    .user-list
+    {
+       margin-top:8%; 
+       width:100%;
+    }
+    #search-div
+    {
+        margin-top:100%;
+     width:140%;
+     }
+     #post-div
+    {
+       margin-top:45%; 
+     width:120%;
+    }
+}
+@media screen and (max-width:204px)
+{
+    #user-show
+    {
+        width:15%;
+    }
+    .user-list
+    {
+       margin-top:10%; 
+       width:100%;
+    }
+    #search-div
+    {
+        margin-top:190%;
+     width:190%;
+     }
+     #post-div
+    {
+       margin-top:45%; 
+     width:170%;
+    }
+    #post-div-view
+    {
+    width:160%;
+   }
+    #frm
+    {
+        margin-left:55%;
+    } 
+    #read-message
+    {
+     width:100%;
+    }
+    #profile-show
+    {
+    width:165%;
+    margin:auto;
+    }
+    #result-div{
+        width:98%;
+    } 
+    #chat-message
+    {
+       width:100%;
+       height:60%;
+    }
+   #utility
+   { 
+    width:100%;
+   }
+    #submit-div-pass
+    {
+    width:85%;    
+    }
+    #user-div
+    {
+        padding:5px;   
+     width:88%;
+    }
+    #username
+    {
+    margin-left: 1.5%;
+    }
+    .password
+    {
+        margin-left: 1.5%;
+    }
+}
+

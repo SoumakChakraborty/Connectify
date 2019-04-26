@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Connectify
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body id="landing">
+        <h1>Connectify-<span>Your own social media platform</span></h1>
+        <%if(signerr&&signerr.length>0){%>
+            <div id="showerror"><%=signerr%></div>
+          <%}%>
+        <div id="formdiv">
+        <form action="/signin" method="POST">
+        <input type="email" name="username" id="username" placeholder="Username"><br>
+        <input type="password" name="password"  id="pass" class="password" placeholder="Password">
+        <a href="#" id="toggle"><img src="../hide.png" id="toggle-img"></a>
+        <div id="submit-div">
+        <input type="submit" value="Sign In" id="submit">
+       </div>
+       </form>
+        <div id="user-div">
+        <a href="/forgotpass" id="forgot-pass">Forgot password?</a>
+        <a href="/signup" id="new-user">Sign up</a>
+        </div>       
+        </div>
+        <script src="/change.js"></script>
+    </body>
+</html>

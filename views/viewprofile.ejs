@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            View profile
+        </title>
+        <link rel="stylesheet" href="/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body>
+         <h1>Connectify-<span>Your own social media platform</span></h1>
+         <%if(success&&success.length>0){%>
+           <div id="show-success"><%=success%></div>
+         <%}%>   
+        <div id="profile-show">
+         <img src="/uploads/<%=result[0].username%>/<%=result[0].profile_pic%>" id="profile-show-img">
+         <p><strong>Name</strong> - <%=result[0].fname+" "+result[0].lname%></p>
+         <p><strong>Email</strong> - <%=result[0].username%></p>
+        <%if(result[0].username!=actual_user){%>
+          <%if(friends.length==0){%>    
+          <div id="send-message">
+           <a href="/sendmessage/<%=actual_user%>/<%=result[0].username%>">Send message</a>
+          </div>
+          <div id="add-friend">
+                <a href="/addfriend/<%=actual_user%>/<%=result[0].username%>">Send request</a>
+          </div>
+         <%}else{%>
+            <div class="send-message">
+                    <a href="/sendmessage/<%=actual_user%>/<%=result[0].username%>">Send message</a>
+            </div>
+          <%}%>            
+        <%}%>
+        </div>
+    </body>
+</html>

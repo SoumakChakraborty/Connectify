@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Messages
+        </title>
+        <link rel="stylesheet" href="/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Connectify-<span>Your own social media platform</span></h1>
+        <%if(result.length==0){%>
+            <h2>No messages to show</h2>
+        <%} else{%>       
+        <%for(var i=0;i<result.length;i++){%>
+        <div id="read-message">    
+         <p><strong>From</strong> - <%=result[i].username%></p>
+         <p class="contracted"><strong>Message</strong> - <%=result[i].message.substring(0,result[i].message.length/2)%>...</p>
+         <p class="expanded"><strong>Message</strong> - <%=result[i].message%></p>
+         <a href="#" class="view-more">View more</a>
+         <a href="#" class="view-less">Show less</a>
+         <a href="#" id="delete-anchor">Delete</a>
+         <form id="frm" action="/deletemessage/<%=result[i].recipent%>/<%=result[i].username%>?_method=DELETE" method="POST">
+         </form>
+        </div>
+        <%}%>
+        <%}%>
+        <script src="/interaction.js"></script>
+        <script src="/submit.js"></script>
+    </body>
+</html>

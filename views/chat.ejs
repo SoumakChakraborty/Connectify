@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Chat Window</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Connectify-<span>Your own social media platform</span></h1>
+            <h2><%=user%></h2>
+       <div id="chat-message">   
+       </div>
+       <div id="utility"> 
+       <input type="text" id="chat" placeholder="Enter message"><br>
+       <div id="send-div">
+       <a href="#" id="sub">Send</a>
+       </div>
+       </div>
+       <script src="/socket.io/socket.io.js"></script>
+       <script>
+           var socket=io();
+           var chat=document.getElementById("chat-message");
+           var message=document.querySelector("#chat");
+           var submit=document.querySelector("#sub");
+           var user=document.querySelectorAll("h2");
+           submit.addEventListener("click",function()
+           { 
+              socket.emit("chat message",user[0].innerText+":"+message.value);
+              chat.insertAdjacentHTML("beforeend","<li id=\"sendmsg\">"+user[0].innerText+":"+message.value+"</li>");
+              message.value="";
+           });
+           socket.on("chat message",function(msg)
+           {
+               chat.insertAdjacentHTML("beforeend","<li id=\"recv\">"+msg+"</li>")
+           });
+       </script> 
+    </body>
+</html>

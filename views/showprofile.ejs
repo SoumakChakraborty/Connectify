@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+            Profile page
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+    <body id="profile">
+        <nav id="nav-div">
+         <a href="#" id="app-name">Connectify</a>
+         <div id="user-show">
+           <%if(result[0].profile_pic!="empty"){%>
+            <a href="#"><img src="/uploads/<%=username%>/<%=result[0].profile_pic%>" id="user-show-img"></a>
+           <%}else{%>
+            <a href="#"><img src="/user1.png" id="user-show-img"></a>   
+           <%}%>   
+         </div>
+         <ul class="user-list">
+             <li id="first"><a href="/viewprofile/<%=username%>">View profile</a></li>
+             <li id="second"><a href="/changepass/<%=username%>">Change password</a></li>
+             <li id="third"><a href="/showmessages/<%=username%>">Messages(<%=message%>)</a></li>
+             <li id="fourth"><a href="/showrequests/<%=username%>">Requests(<%=request%>)</a></li>
+             <li id="fifth"><a href="/changeprofilepic/<%=username%>">Change profile picture</a></li>
+             <li id="sixth"><a href="/signout">Sign Out</a></li>
+         </ul>    
+        </nav>
+        <%if(mood&&mood.length>0){%>
+          <div id="show-success"><%=mood%></div>
+        <%}%>
+        <div id="search-div">
+        <form action="/search" method="POST">
+        <input type="text" placeholder="Search" id="search" name="query">
+        <input type="submit" id="search-submit" value="">
+        </form>
+       </div>   
+       <ul id="user-interaction">
+           <li><a href="/newpost/<%=username%>">Create a post</a></li>
+           <li><a href="/friends/<%=username%>">Friends(<%=friends%>)</a></li>
+           <li><a href="/photos/<%=username%>">Photos(<%=photo%>)</a></li>
+           <li><a href="/chat/<%=username%>">Chat</a></li>
+       </ul>
+       <div id="online">
+        <%if(online.length==0){%>
+          <p id="none">No friends are online</p>
+        <%}else{%>
+         <p>Friends online</p> 
+         <%for(var i=0;i<online.length;i++){%>
+          <%if(online[i].profile_pic!="empty"){%> 
+            <li id="friend"><img src="/uploads/<%=online[i].username%>/<%=online[i].profile_pic%>" id="online-pic"> <%=online[i].fname+" "+online[i].lname%></li>
+          <%}%>  
+         <%}%>
+        <%}%>       
+       </div>
+       <%for(var i=0;i<posts.length;i++){%>
+        <div id="post-div">
+          <p><strong>Title</strong> - <%=posts[i].title%></p> 
+          <%if(posts[i].content!="empty"){%>
+            <p><strong>Content</strong> - <%=posts[i].content.substring(0,posts[i].content.length/2)%>...<a  class="post-action" href="/viewpost/<%=posts[i].username%>/<%=posts[i].post_ID%>">View more</a></p>
+          <%}%>
+          <%if(posts[i].photo_name!="empty"){%>
+            <img src="/uploads/<%=username%>/<%=posts[i].photo_name%>">
+          <%}%>
+          <p><strong>Creator</strong> - <%=posts[i].username%></p>
+          <p><strong>Created on</strong> - <%=posts[i].created%></p>
+          <%if(username==posts[i].username){%>
+            <div id="user-utility">
+            <a href="/editpost/<%=posts[i].username%>/<%=posts[i].post_ID%>" class="post-action" id="edit">Edit</a>
+            <a href="/mood/<%=username%>/<%=posts[i].post_ID%>/like" class="post-action" id="like">Like</a>
+            </div> 
+            <form action="/deletepost/<%=posts[i].username%>/<%=posts[i].post_ID%>?_method=DELETE" method="POST" id="frm">
+              <input type="submit" value="Delete" id="delete-submit">
+            </form>
+          <%}else{%>
+           <a href="/mood/<%=username%>/<%=posts[i].post_ID%>/like" class="post-action">Like</a>
+           <a href="/mood/<%=username%>/<%=posts[i].post_ID%>/dislike" class="post-action">Dislike</a> 
+           <%}%>          
+        </div>
+       <%}%>   
+        <script src="/listshow.js"></script> 
+    </body>
+</html>

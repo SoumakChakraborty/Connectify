@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Reset Password</title>
+        <link rel="stylesheet" href="/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Connectify-<span>Your own social media platform</span></h1>
+         <div id="formdiv">
+           <form action="/resetpass/<%=user%>?_method=PUT" method="POST" onsubmit="return check()">
+            <input type="text" name="password"  class="password" placeholder="New password" required><br>
+            <input type="text" class="retype-password" placeholder="Retype new password" required><br>
+            <div id="submit-div-pass">
+                <input type="submit" value="Reset password" id="submit-pass">
+            </div>
+          </form>  
+         </div>
+         <script src="/check.js"></script>
+    </body>
+</html>

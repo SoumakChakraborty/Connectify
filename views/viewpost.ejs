@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>View post</title>
+        <link rel="stylesheet" href="/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Connectify-<span>Your own social media platform</span></h1>
+            <div id="post-div-view">
+                      <p><strong>Title</strong> - <%=posts[0].title%></p> 
+                      <%if(posts[0].content!="empty"){%>
+                        <p><strong>Content</strong> - <%=posts[0].content%></p>
+                      <%}%>
+                      <%if(posts[0].photo_name!="empty"){%>
+                        <img src="/uploads/<%=posts[0].username%>/<%=posts[0].photo_name%>">
+                      <%}%>
+                      <p><strong>Creator</strong> - <%=posts[0].username%></p>
+                      <p><strong>Created on</strong> - <%=posts[0].created%></p>
+                      <div id="post-comment">
+                         <a href="/comment/<%=posts[0].username%>/<%=posts[0].post_ID%>" class="post-action">Comment</a>
+                        <%for(var i=0;i<comment.length;i++){%>
+                          <p><strong><%=comment[i].username%></strong> - <%=comment[i].comment%></p>
+                          <%if(comment[i].username==actual){%>
+                            <a href="/edit/comment/<%=comment[i].username%>/<%=posts[0].post_ID%>" class="post-action">Edit</a>
+                            <a href="#" class="post-action" id="delete-anchor">Delete</a>
+                            <form action="/delete/comment/<%=comment[i].username%>/<%=posts[0].post_ID%>?_method=DELETE" method="POST" id="frm">
+                            </form>
+                            <script src="/submit.js"></script>
+                           <%}%>   
+                        <%}%>       
+                     </div>
+                     <div id="post-mood">
+                     <%for(var i=0;i<mood.length;i++){%>
+                        <%if(mood[i].type!="neutral"){%>
+                           <%if(mood[i].type=="like"){%>    
+                             <p><strong>Liked by</strong></p>
+                             <p><strong>Username</strong>- <%=mood[i].username%></p>
+                           <%}else{%>
+                                <p><strong>Disliked by</strong></p>
+                                <p><strong>Username</strong>- <%=mood[i].username%></p>
+                             <%}%>      
+                        <%}%>
+                    <%}%>         
+                    </div>
+            </div>  
+    </body>
+</html>

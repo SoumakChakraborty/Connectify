@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Send message
+        </title>
+        <link rel="stylesheet" href="/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Connectify-<span>Your own social media platform</span></h1>
+            <div id="send-msg-div">
+                <form action="/sendmessage/<%=user%>/<%=recipent%>" method="POST">
+                   <textarea name="message" id="message" placeholder="Enter message"></textarea><br>
+                   <input type="submit" id="submit-msg" value="Send">
+                </form>
+            </div>
+    </body>
+</html>

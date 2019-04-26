@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>View photo</title>
+        <link rel="stylesheet" href="/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+    <body>
+         <div id="view-photo-div">
+             <img src="/uploads/<%=user%>/<%=photo%>">
+             <a href="#" class="post-action" id="delete-anchor">Delete</a>
+             <form action="/delete/photo/<%=user%>/<%=photo%>?_method=DELETE" method="POST" id="frm">
+            </form>
+             <div id="view-comment-div">
+              <a href="/comment/photo/<%=user%>/<%=photo%>" class="post-action">Comment</a>
+              <%for(var i=0;i<result.length;i++){%>
+                <p><strong><%=result[i].username%></strong>- <%=result[i].comment%></p>
+                <%if(result[i].username==user){%>
+                    <a href="/edit/comment/photo/<%=user%>/<%=photo%>" class="post-action" id="comment-anchor">Edit</a>  
+                    <form action="/comment/<%=user%>/<%=photo%>/delete?_method=DELETE" method="POST" id="frm1">
+                         <input type="submit" value="Delete" id="delete-submit"> 
+                    </form>
+                 <%}%>    
+              <%}%>       
+             </div>
+         </div>
+         <script src="/submit.js"></script>
+    </body>
+</html>

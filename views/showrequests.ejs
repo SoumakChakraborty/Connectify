@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Requests</title>
+        <meta name="viewport",content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Connectify-<span>Your own social media platform</span></h1>
+        <%if(result.length==0){%>
+            <h2>No requests</h2>
+        <%} else{%>        
+        <%for(var i=0;i<result.length;i++){%>
+          <div id="result-div">
+            <div id="result-div-img"> 
+            <img src="/uploads/<%=result[i].username%>/<%=result[i].profile_pic%>">
+            </div>
+            <div id="result-div-anchor">    
+            <a href="#"><%=result[i].fname+" "+result[i].lname%></a>
+            </div>
+           <div id="Del-accept"> 
+            <a href="/acceptrequest/<%=result[i].recipent%>/<%=result[i].username%>">Accept request</a>
+            <a href="#" id="delete-anchor">Delete request</a>
+            <form action="/deleterequest/<%=result[i].recipent%>/<%=result[i].username%>?_method=DELETE" method="POST" id="frm">
+            </form>
+            </div> 
+          </div> 
+         <%}%>
+         <%}%>
+         <script src="/submit.js"></script>   
+    </body>
+</html>

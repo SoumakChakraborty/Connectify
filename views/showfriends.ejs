@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Show friends</title>
+        <meta name="viewport",content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Connectify-<span>Your own social media platform</span></h1>
+        <%for(var i=0;i<result.length;i++){%>
+          <div id="result-div">
+            <div id="result-div-img"> 
+            <img src="/uploads/<%=result[i].username%>/<%=result[i].profile_pic%>">
+            </div>
+            <div id="result-div-anchor">    
+            <a href="/viewprofile/<%=result[i].username%>"><%=result[i].fname+" "+result[i].lname%></a>
+            </div> 
+            <a href="/unfriend/<%=user%>/result[i].username%>" class="post-action" id="uunfriend">Unfriend</a>
+          </div> 
+         <%}%>   
+    </body>
+</html>

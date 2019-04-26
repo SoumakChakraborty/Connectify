@@ -1,0 +1,23 @@
+<html>
+    <head>
+       <title>Create post</title>
+       <link rel="stylesheet" href="/style.css">
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Connectify-<span>Your own social media platform</span></h1>
+            <%if(error&&error.length>0){%>
+               <div id="showerror"><%=error%></div>
+            <%}%>    
+        <div id="formdiv">
+           <form action="/newpost/<%=user%>" method="POST" enctype="multipart/form-data">
+           <input type="text" name="postname" id="postname" placeholder="Post name" required><br> 
+           <textarea name="postcontent" id="post-content" placeholder="Post content"></textarea><br>
+           <input type="file" name="postphoto" id="post-photo"><br>
+           <input type="submit" id="submit-post" value="Create post">
+         </form>
+        </div>
+    </body>
+</html>
